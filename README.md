@@ -1,2 +1,2 @@
 # diablo_like_landing_page
-Don't as, it just clicked
+Don't ask, it just clicked
