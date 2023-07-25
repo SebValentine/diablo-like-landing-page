@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
+
+body {
+  font-family: "Handjet";
+  margin: 0;
+  padding: 0;
+  background-image: url(https://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-8.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #33333300;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 4200px;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: #333;
+  transition: 0.3s;
+}
+
+.hamburger {
+  display: none; /* Hide the hamburger icon initially */
+  cursor: pointer;
+  font-size: 24px;
+  image-rendering: pixelated; /* Add pixelated effect */
+}
+
+/* Show the toggle button on normal screens (wider than 768px) */
+@media (min-width: 769px) {
+  #toggle-nav {
+    display: block;
+  }
+}
+
+/* Hide the navigation button on mobile screens */
+@media (max-width: 768px) {
+  #toggle-nav {
+    display: none;
+  }
+
+  header {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make the header fill the entire viewport height */
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  nav ul {
+    display: none; /* Hide the navigation links */
+    flex-direction: column; /* Stack the hamburger menu items vertically */
+    align-items: center; /* Center the hamburger menu items */
+    padding-top: 0px;
+    animation: slide-in 0.3s forwards;
+  }
+
+  nav ul li {
+    margin: 20px 0;
+  }
+
+  .hamburger {
+    display: block; /* Show the hamburger icon */
+    margin-bottom: 15px;
+    margin-left: 15px;
+  }
+
+  .show-nav {
+    display: flex; /* Show the navigation links when 'show-nav' class is added */
+    animation: slide-in 0.3s forwards;
+  }
+
+  .hide {
+    animation: slide-out 0.3s forwards; /* Slide-out animation for hiding navigation items */
+  }
+
+  /* Place the navigation items below the H1 */
+  h1 {
+    order: 1;
+  }
+
+  nav {
+    order: 2;
+  }
+}
+
+/* Animation Keyframes for Slide-in */
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%); /* Start position - above the screen */
+  }
+  to {
+    transform: translateY(0); /* End position - on the screen */
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateY(0); /* Start position - on the screen */
+  }
+  to {
+    transform: translateY(-100%); /* End position - above the screen */
+  }
+}
+
+.hamburger-wrapper {
+  /* Hide the hamburger icon on mobile screens */
+  display: none;
+}
+
+/* Show the hamburger icon only on normal screens (wider than 768px) */
+@media (min-width: 769px) {
+  .hamburger-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hamburger-gif {
+  width: 200px; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+}
+
+}
