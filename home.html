@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
   <audio id="audio" preload="metadata" autoplay>
     <source src="./Diablo.mp3">
     Your browser does not support the audio element.
@@ -24,6 +25,8 @@
     Your browser does not support the audio element.
   </audio>
 
+  
+
   <header>
     <div class="container">
       <h1 id="header-title">My Portfolio</h1>
@@ -38,8 +41,31 @@
     </div> 
   </header>
 
+  <div class="wrapper">
+  <div id="about">
+    Hi! <br> I'm Solymosi Szabolcs and i am an artist, kinda.... 😅<br> i like to draw✍️,<br> to make music🎵<br> or videos🎬<br> coding👨‍💻 <br> or anything related to art! 🎨 
+  </div>
+</div>
+
 
   <script src="script.js" defer></script>
+  <script>
+    // Add the class 'loaded' to the body element when the DOM content is loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      document.body.classList.add("loaded");
+    });
+
+    const aboutLink = document.querySelector('a[href="#about"]');
+      aboutLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        const aboutSection = document.getElementById("about");
+        const offsetTop = aboutSection.getBoundingClientRect().top + window.pageYOffset;
+        window.scroll({
+          top: offsetTop,
+          behavior: "smooth" // Add the smooth behavior for the scroll animation
+        });
+      });
+  </script>
 </body>
 
 </html>

@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap');
 
 body {
-  font-family: "Handjet";
+  font-family: "Spectral";
   margin: 0;
   padding: 0;
   background-image: url(https://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-8.gif);
   background-size: cover;
   background-repeat: no-repeat;
+  backdrop-filter: blur(50px);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,6 +17,47 @@ body {
   margin: 0;
   background-color: #333;
 }
+#about {
+  color: #fff; /* Set the text color for the 'about' section */
+  font-size: 30px;
+  margin: 0 auto;
+  position: absolute;
+  background-image: url(cover.png);
+  top: 120%; /* Vertically center the element */
+  left: 20%; /* Horizontally center the element */
+  transform: translate(-50%, -50%); /* Adjust the position to center the element properly */
+  background-image: url(cover.png);
+}
+.wrapper {
+  background-image: url(cover.png);
+}
+
+
+body.loaded {
+  animation: fadeIn 1s forwards, blurBackground 3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation for background blur */
+@keyframes blurBackground {
+  from {
+    filter: blur(50px);
+    backdrop-filter: blur(50px);
+  }
+  to {
+    filter: blur(0);
+    backdrop-filter: blur(0);
+  }
+}
+
 
 header {
   background-color: #33333300;
@@ -23,13 +66,23 @@ header {
   text-align: center;
 }
 
+
 .container {
   max-width: 1200px;
-  margin:  auto;
+  margin: 0 auto;
+  margin-bottom: 90vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid #fff;
+  border-radius: none;
+  padding: 20px;
+  width: 100%;
+  background-image: url(cover.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 #portal {
   border: 1px solid #fff;
   padding: 0px;
@@ -45,8 +98,9 @@ header {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 30px;
   margin: 0;
+  padding-right: 200px;
 }
 
 nav ul {
@@ -87,17 +141,26 @@ nav ul li a:hover {
   image-rendering: pixelated; /* Add pixelated effect */
 }
 
-/* Show the toggle button on normal screens (wider than 768px) */
-@media (min-width: 769px) {
-  #toggle-nav {
-    display: block;
-  }
-}
 
-/* Hide the navigation button on mobile screens */
+
 @media (max-width: 768px) {
   #toggle-nav {
     display: none;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin:  auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: none;
+    padding: none;
+    box-sizing: none;
+    background-image: url(none);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   header {
@@ -112,6 +175,7 @@ nav ul li a:hover {
   h1 {
     font-size: 36px;
     margin-bottom: 20px;
+    padding-right: 0;
   }
 
   nav ul {
@@ -186,5 +250,29 @@ nav ul li a:hover {
 .hamburger-gif {
   width: 200px; 
 }
+
+}
+@media (min-width: 769px) {
+  #toggle-nav {
+    display: block;
+  }
+
+  /* Add margin or padding to the nav element to create space between h1 and nav objects */
+  nav {
+    margin-left: 20px; 
+  }
+
+
+  h1 {
+    order: -1;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #toggle-nav {
+    display: none;
+  }
+
 
 }
