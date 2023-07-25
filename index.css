@@ -4,7 +4,7 @@ body {
   font-family: "Handjet";
   margin: 0;
   padding: 0;
-  background-image: url(https://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-8.gif);
+  background-image: url(https://images6.alphacoders.com/335/335252.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -14,6 +14,7 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #333;
+  backdrop-filter: blur(5px);
 }
 
 header {

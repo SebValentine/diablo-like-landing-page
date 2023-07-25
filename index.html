@@ -4,43 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Website</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Diablo</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-  <audio autoplay>
-    <source src="./Diablo.mp3">
-    <source src="Diablo.wav">
-    Your browser does not support the audio element.
-  </audio>
-
-  <audio id="click-sound">
-    <source src="./portal1.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
   <audio id="hamburger-sound">
-    <source src="./hamburger-sound.mp3" type="audio/mpeg">
+    <source src="hamburger-sound.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
-  <header>
-    <div class="container">
-      <h1>My Portfolio</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact me</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger Icon -->
-      </nav>
-    </div> 
-  </header>
+  <div>
+    <a id="portal-link">
+      <img id="portal" src="portal-2.gif" alt="">
+    </a>
+  </div>
 
-
-  <script src="script.js" defer></script>
 </body>
+<script src="portal.js"></script>
 
 </html>

@@ -56,3 +56,15 @@ function toggleNav() {
   // Hide the GIF when you click on it
   gifToggle.style.display = "none";
 }
+function playAudio() {
+  const audio = document.getElementById("audio");
+  audio.play();
+}
+const hamburgerButton = document.getElementById("hamburger");
+const headerTitle = document.getElementById("header-title");
+
+hamburgerButton.addEventListener("click", () => {
+  // Toggle the visibility of the <h1> element
+  headerTitle.style.display =
+    headerTitle.style.display === "none" ? "block" : "none";
+});
