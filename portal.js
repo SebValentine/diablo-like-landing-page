@@ -15,3 +15,6 @@ function playSoundAndRedirect() {
 
 // Add click event listener to the portal link
 portalLink.addEventListener("click", playSoundAndRedirect);
+
+// Add touchend event listener to the portal link for mobile devices
+portalLink.addEventListener("touchend", playSoundAndRedirect);
