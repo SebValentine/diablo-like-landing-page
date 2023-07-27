@@ -2,8 +2,14 @@ const portalLink = document.getElementById("portal-link");
 const clickSound = document.getElementById("hamburger-sound");
 let isPlaying = false;
 
-// Function to play the sound and redirect
-function playSoundAndRedirect() {
+// Add click and touchend event listener to the portal link
+portalLink.addEventListener("click", handleClick);
+portalLink.addEventListener("touchend", handleClick);
+
+// Function to handle click/touch events
+function handleClick(event) {
+  event.preventDefault(); // Prevent the default link behavior on mobile devices
+
   if (!isPlaying) {
     clickSound.play();
     isPlaying = true;
@@ -12,9 +18,3 @@ function playSoundAndRedirect() {
     }, 1000);
   }
 }
-
-// Add click event listener to the portal link
-portalLink.addEventListener("click", playSoundAndRedirect);
-
-// Add touchend event listener to the portal link for mobile devices
-portalLink.addEventListener("touchend", playSoundAndRedirect);
