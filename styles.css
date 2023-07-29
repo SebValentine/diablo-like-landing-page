@@ -56,6 +56,10 @@ body {
   background-color: black;
 }
 
+#mobile-bg {
+  display: none;
+}
+
 body.loaded {
   animation: fadeIn 1s forwards, blurBackground 3s forwards;
 }
@@ -102,7 +106,6 @@ header {
   border: 1px solid #fff;
   border-radius: none;
   padding: 20px;
-  width: 100%;
   background-image: url(cover.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -171,6 +174,14 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   #toggle-nav {
     display: none;
+  }
+
+  #bg {
+    display: none;
+  }
+
+  #mobile-bg {
+    display: flex;
   }
 
   #about {
